@@ -2,4 +2,4 @@
 
 * **Alumno:** Tomas Arias
 * **Curso:** 5.º Año
-* **Materia:** Software II
+* **Materia:** Software/Redes II
