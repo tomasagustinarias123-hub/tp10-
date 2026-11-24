@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Control TP10 - YoLo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Control YoLo - TP10</h1>
+
+    <!-- Zona de video en vivo -->
+    <section class="panel-video">
+      <h2>Cámara en vivo (MJPEG)</h2>
+      <!-- Esta etiqueta pide el video continuo al servidor -->
+      <img id="visor-video" src="/api/video" alt="Transmisión de cámara YOLO" />
+    </section>
+
+    <!-- Zona de los 5 botones de comando -->
+    <section class="panel-controles">
+      <h2>Comandos del sistema</h2>
+      <div class="botonera">
+        <button data-comando="iniciar">1. Iniciar</button>
+        <button data-comando="detener">2. Detener</button>
+        <button data-comando="capturar">3. Capturar</button>
+        <button data-comando="calibrar">4. Calibrar</button>
+        <button data-comando="reiniciar">5. Reiniciar</button>
+      </div>
+    </section>
+
+    <!-- Zona donde aparece la respuesta del servidor -->
+    <section class="panel-estado">
+      <h2>Estado y Respuesta del Servidor</h2>
+      <p id="texto-estado">Esperando comando...</p>
+      <pre id="caja-respuesta">{}</pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
